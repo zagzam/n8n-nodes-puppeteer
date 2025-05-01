@@ -19,7 +19,7 @@ RUN apk add --no-cache \
 # Tell Puppeteer to use installed Chrome instead of downloading it
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser \
-    PUPPETEER_ADDITIONAL_ARGS="--allow-running-insecure-content --disable-web-security --unsafely-treat-insecure-origin-as-secure=http://admin.mint05.com" 
+    PUPPETEER_ADDITIONAL_ARGS="--allow-running-insecure-content --disable-web-security --no-sandbox --unsafely-treat-insecure-origin-as-secure=http://admin.mint05.com" 
 
 # Install n8n-nodes-puppeteer in a permanent location
 RUN mkdir -p /opt/n8n-custom-nodes && \
